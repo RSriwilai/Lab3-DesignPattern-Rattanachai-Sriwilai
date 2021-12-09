@@ -47,6 +47,12 @@ namespace HouseFB
             _house.ParkingSpotsInGarage = parkingspots;
             return this;
         }
+        
+        public HouseBuilder HasSvimmingPool()
+        {
+            _house.HasSwimmingPool = true;
+            return this;
+        }
 
 
         public House Build()

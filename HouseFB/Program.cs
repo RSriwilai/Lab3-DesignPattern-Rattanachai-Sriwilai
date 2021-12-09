@@ -6,6 +6,7 @@ House house = new HouseBuilder()
     .NumberOfRooms(5)
     .NumberOfWindows(25)
     .NumberOfParkingSpots(2)
+    .HasSvimmingPool()
     .Build();
 
 Console.WriteLine(house);
