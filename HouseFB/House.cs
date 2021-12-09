@@ -21,6 +21,8 @@ namespace HouseFB
 
         public bool HasGarage => ParkingSpotsInGarage > 0;
 
+        public static HouseBuilder Builder = new HouseBuilder();
+
         public House() { }
 
         public House(int noOfRooms, int noOfWindows, string streeAdress, bool hasSwimmingPool, int parkingSpotsInGarage)
