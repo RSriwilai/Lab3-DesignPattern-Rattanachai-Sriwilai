@@ -26,7 +26,7 @@ namespace HouseFB
         {
             if(rooms <= 0)
             {
-                throw new ArgumentOutOfRangeException("A house cannot have negative number of room");
+                throw new ArgumentOutOfRangeException("A house cannot have negative number of rooms");
             }
             _house.NoOfRooms = rooms;
             return this;

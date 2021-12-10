@@ -30,7 +30,16 @@ namespace HouseFB.Tests
         public void NumberOfParkingSpots_Get_Should_Return_2_ParkingSpots(int parkingspots)
         {
             House sut = new HouseBuilder().NumberOfParkingSpots(parkingspots).Build();
-            Assert.AreEqual(2, sut.ParkingSpotsInGarage);
+            Assert.AreEqual(2, sut.ParkingSpotsInGarage);   
+        }
+
+        [TestCase(0)]
+        public void NumberOfRooms_Testing_Expected_Exeption_When_Room_Is_0(int rooms)
+        {
+            Assert.That(() => new HouseBuilder().NumberOfRooms(rooms),
+            Throws.TypeOf<ArgumentOutOfRangeException>()
+            .With.Message.EqualTo("Specified argument was out of the range of valid values. (Parameter 'A house cannot have negative number of rooms')"));
+
         }
 
     }
